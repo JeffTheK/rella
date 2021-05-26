@@ -36,6 +36,22 @@ id_t get_free_id() {
 }
 ````
 
+Component
+
+````c++
+template<typename DERIVED>
+class Component {
+public:
+    Component() {
+        class_id = reinterpret_cast<id_t>(typeid(DERIVED).name());
+    }
+    id_t get_class_id() const noexcept { return class_id; }
+private:
+	id_t class_id = 0;
+    
+}
+````
+
 
 
 
