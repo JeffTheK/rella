@@ -36,6 +36,11 @@ id_t get_free_id() {
 	free_id++;
     return free_id;
 }
+
+template<typename TYPE>
+id_t get_type_id() {
+    reinterpret_cast<id_t>(typeid(TYPE).name());
+}
 ````
 
 Component
@@ -45,7 +50,7 @@ template<typename DERIVED>
 class Component {
 public:
     Component() {
-        class_id = reinterpret_cast<id_t>(typeid(DERIVED).name());
+        class_id = get_type_id<DERIVED>();
     }
     id_t get_class_id() const noexcept { return class_id; }
 private:
