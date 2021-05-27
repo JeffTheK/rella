@@ -69,7 +69,7 @@ private:
 
 - [x] Position - x, y
 
-- [ ] Health - min, max, current, regen
+- [x] Health - min, max, current, regen
 
 - [ ] Mana - min, max,  current, regen
 
