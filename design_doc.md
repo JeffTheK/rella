@@ -73,7 +73,7 @@ private:
 
 - [x] Mana - min, max,  current, regen
 
-- [ ] Hunger - min, max, current, rate
+- [x] Hunger - min, max, current, rate
 
 - [ ] Damage - min, max
 
