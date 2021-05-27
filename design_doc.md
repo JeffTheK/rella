@@ -67,7 +67,7 @@ private:
 
 ## Components that we need
 
-- [ ] Position - x, y
+- [x] Position - x, y
 
 - [ ] Health - min, max, current, regen
 
