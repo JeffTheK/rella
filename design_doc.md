@@ -81,7 +81,7 @@ private:
 
 - [ ] EnemyAI
 
-- [ ] Faction - faction
+- [ ] Faction - faction (player, enemy, neutral)
 
 - [ ] Inventory - max_items, items
 
