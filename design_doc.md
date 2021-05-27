@@ -44,7 +44,8 @@ id_t get_type_id() {
 }
 ````
 
-Component
+- [x] Component
+
 
 ````c++
 template<typename DERIVED>
