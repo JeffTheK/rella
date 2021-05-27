@@ -1,5 +1,7 @@
 #pragma once
 
+#include <typeinfo>
+
 using id_t = unsigned int;
 
 id_t get_free_id();
