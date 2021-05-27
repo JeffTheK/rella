@@ -75,7 +75,7 @@ private:
 
 - [x] Hunger - min, max, current, rate
 
-- [ ] Damage - min, max
+- [x] Damage - min, max
 
 - [ ] Name - name
 
