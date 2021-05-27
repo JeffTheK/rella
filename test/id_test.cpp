@@ -1,5 +1,5 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include <doctest.h>
+#include "../include/doctest.h"
 #include "../src/id.hpp"
 
 TEST_CASE("get_free_id") {
