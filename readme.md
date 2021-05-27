@@ -7,7 +7,21 @@ A c++ terminal text game
 
 ## Building
 
+Run this in terminal to make release build:
+
 ````shell
-make release
+rake release
+````
+
+for debug build:
+
+````shell
+rake debug
+````
+
+to run tests:
+
+````shell
+rake test
 ````
 
