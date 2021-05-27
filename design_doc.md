@@ -71,7 +71,7 @@ private:
 
 - [x] Health - min, max, current, regen
 
-- [ ] Mana - min, max,  current, regen
+- [x] Mana - min, max,  current, regen
 
 - [ ] Hunger - min, max, current, rate
 
