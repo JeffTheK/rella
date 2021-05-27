@@ -2,7 +2,7 @@
 
 #include "component.hpp"
 
-class Position : Component<Position> {
+struct Position : Component<Position> {
     Position(unsigned int x_, unsigned int y_) {
         x = x_;
         y = y_;
