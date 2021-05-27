@@ -2,8 +2,8 @@ require 'rake/clean'
 
 CXX = 'g++'
 
-SRC_FILES = ['src/id.cpp']
-TEST_FILES = ['test/id_test.cpp']
+SRC_FILES = 'src/**.cpp'
+TEST_FILES = 'test/**.cpp'
 
 CLEAN.include 'bin/**'
 
@@ -11,6 +11,6 @@ task :test do
     TEST_FLAGS = '-Wall -Wextra -static-libstdc++ -O0 -g'
     OUT = '-o bin/test'
     system('rake clean')
-    system("#{CXX} #{TEST_FLAGS} #{SRC_FILES.join} #{TEST_FILES.join} #{OUT}")
+    system("#{CXX} #{TEST_FLAGS} #{SRC_FILES} #{TEST_FILES} #{OUT}")
     system("./bin/test")
 end
