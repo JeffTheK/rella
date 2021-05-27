@@ -77,7 +77,7 @@ private:
 
 - [x] Damage - min, max
 
-- [ ] Name - name
+- [x] Name - name
 
 - [ ] EnemyAI
 
