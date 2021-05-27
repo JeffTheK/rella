@@ -1,3 +1,5 @@
+
+
 # Design Doc
 
 
@@ -55,6 +57,30 @@ private:
 
 
 
+
+## Components that we need
+
+- [ ] Position - x, y
+
+- [ ] Health - min, max, current, regen
+
+- [ ] Mana - min, max,  current, regen
+
+- [ ] Hunger - min, max, current, rate
+
+- [ ] Damage - min, max
+
+- [ ] Name - name
+
+- [ ] EnemyAI
+
+- [ ] Faction - faction
+
+- [ ] Inventory - max_items, items
+
+- [ ] Item
+
+  
 
 
 
