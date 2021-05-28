@@ -13,6 +13,16 @@ struct Inventory : Component<Inventory> {
         max_items = max_items_;
     }
 
+    bool add_item(Item item) {
+        if (size() < max_items) {
+            items.push_back(item);
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     Item get_item_by_index(unsigned int index) {
         return items[index];
     }
