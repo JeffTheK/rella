@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <functional>
 #include "component.hpp"
 #include "item.hpp"
 
@@ -14,6 +15,17 @@ struct Mana : Component<Mana> {
 
     Item get_item_by_index(unsigned int index) {
         return items[index];
+    }
+
+    std::vector<Item*> find_if(std::function<true(const Item&)> func) {
+        out = std::vector{};
+
+        for (const auto& item : items) {
+            if (func(item) == true) {
+                out.push_back(item);
+            }
+        }
+        return out 
     }
 
     unsigned int size() const noexcept { return items.size(); }
