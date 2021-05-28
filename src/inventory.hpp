@@ -12,5 +12,9 @@ struct Mana : Component<Mana> {
       max_items = max_items_;
     }
 
+    Item get_item_by_index(unsigned int index) {
+        return items[index];
+    }
+
     unsigned int size() const noexcept { return items.size(); }
 };
