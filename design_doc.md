@@ -83,7 +83,7 @@ private:
 
 - [x] Faction - faction (player, enemy, neutral)
 
-- [ ] Inventory - max_items, items
+- [ ] Inventory - max_items, items, size(), get_item_by_index(), find_item()
 
 - [ ] Item
 
