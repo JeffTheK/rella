@@ -12,16 +12,22 @@ Entity component system
 // The entity is a general purpose object that represents our player, enemies items.
 class Entity {
 public:
-    
     Entity(tag_) {
         tag = tag_
         id = rella::get_free_id()
     }
+    
+    template<typename T>
+    Component& add_component(Component comp) {
+        components.push_back(std::make_unique<T>(comp))
+    }
+        
    	id_t get_id() const noexcept { return id; }
     tag_t get_tag() const noexcept { return tag ;}
 private:
    	id_t id = 0;
     tag_t tag = "";
+   	std::vector<std::unique_ptr<Component>> components;
 }
 ````
 
@@ -53,7 +59,7 @@ class Entity;
 template<typename DERIVED>
 class Component {
 public:
-    Entity* owner_ptr = nullptr;
+    Entity* owner_ptr = nullptr;	
     
     Component() {
         class_id = get_type_id<DERIVED>();
