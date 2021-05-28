@@ -11,4 +11,6 @@ struct Mana : Component<Mana> {
     Mana(unsigned int max_items_) {
       max_items = max_items_;
     }
+
+    unsigned int size() const noexcept { return items.size(); }
 };
