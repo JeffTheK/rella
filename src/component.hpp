@@ -2,9 +2,13 @@
 
 #include "id.hpp"
 
+class Entity;
+
 template<typename DERIVED>
 class Component {
 public:
+    Entity* owner_ptr = nullptr;
+
     Component() {
         class_id = get_type_id<DERIVED>();
     }
