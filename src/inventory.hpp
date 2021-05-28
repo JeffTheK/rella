@@ -9,7 +9,7 @@ struct Mana : Component<Mana> {
     std::vector<Item> items;
 
     Mana(unsigned int max_items_) {
-      max_items = max_items_;
+        max_items = max_items_;
     }
 
     Item get_item_by_index(unsigned int index) {
