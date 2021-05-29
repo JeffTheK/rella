@@ -30,9 +30,9 @@ struct Inventory : Component<Inventory> {
     std::vector<Item*> find_if(std::function<true(const Item&)> func) {
         auto out = std::vector<Item*>{};
 
-        for (const auto& item : items) {
-            if (func(item) == true) {
-                out.push_back(item);
+        for (auto item_ptr : items) {
+            if (func(reinterpret_cast<const Item&>((*item_ptr)) == true) {
+                out.push_back(item_ptr);
             }
         }
         return out; 
