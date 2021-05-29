@@ -26,6 +26,11 @@ public:
     void remove_component() {
        	// remove component if found
     }
+    
+    template<typename T>
+    bool has_component() {
+        // return true if component and false if not
+    }
         
    	id_t get_id() const noexcept { return id; }
     tag_t get_tag() const noexcept { return tag ;}
