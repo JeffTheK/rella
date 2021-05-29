@@ -14,7 +14,7 @@ struct Inventory : Component<Inventory> {
     }
 
     bool add_item(Item item) {
-        if (size() < max_items) {
+        if (this->size() < max_items) {
             items.push_back(item);
             return true;
         }
