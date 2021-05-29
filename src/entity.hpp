@@ -21,4 +21,4 @@ private:
    	id_t id = 0;
     tag_t tag = "";
    	std::vector<Component<void>*> components;
-}
+};
