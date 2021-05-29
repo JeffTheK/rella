@@ -35,7 +35,7 @@ struct Inventory : Component<Inventory> {
                 out.push_back(item);
             }
         }
-        return out 
+        return out; 
     }
 
     unsigned int size() const noexcept { return items.size(); }
