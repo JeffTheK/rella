@@ -28,6 +28,12 @@ public:
     }
     
     template<typename T>
+    T* get_component() {
+        // return pointer to T if found of type T
+        // else return nullptr
+    }
+    
+    template<typename T>
     bool has_component() {
         // return true if component and false if not
     }
