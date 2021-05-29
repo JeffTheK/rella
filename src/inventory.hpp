@@ -27,7 +27,7 @@ struct Inventory : Component<Inventory> {
         return items[index];
     }
 
-    std::vector<Item*> find_if(std::function<true(const Item&)> func) {
+    std::vector<Item*> find_if(std::function<bool(const Item&)> func) {
         auto out = std::vector<Item*>{};
 
         for (auto item_ptr : items) {
