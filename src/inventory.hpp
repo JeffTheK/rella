@@ -7,7 +7,7 @@
 
 struct Inventory : Component<Inventory> {
     unsigned int max_items = 0;
-    std::vector<Item> items;
+    std::vector<Item*> items;
 
     Inventory(unsigned int max_items_) {
         max_items = max_items_;
@@ -15,7 +15,7 @@ struct Inventory : Component<Inventory> {
 
     bool add_item(Item item) {
         if (this->size() < max_items) {
-            items.push_back(item);
+            items.push_back(new Item(item));
             return true;
         }
         else {
