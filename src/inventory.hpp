@@ -31,7 +31,7 @@ struct Inventory : Component<Inventory> {
         auto out = std::vector<Item*>{};
 
         for (auto item_ptr : items) {
-            if (func(reinterpret_cast<const Item&>((*item_ptr)) == true) {
+            if (func(reinterpret_cast<const Item&>(*item_ptr) == true) {
                 out.push_back(item_ptr);
             }
         }
