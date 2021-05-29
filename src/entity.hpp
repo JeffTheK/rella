@@ -21,5 +21,5 @@ public:
 private:
    	id_t id = 0;
     tag_t tag = "";
-   	std::vector<std::unique_ptr<Component>> components;
+   	std::vector<Component<void>*> components;
 }
