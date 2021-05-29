@@ -21,6 +21,11 @@ public:
     Component& add_component(Component comp) {
         components.push_back(std::make_unique<T>(comp))
     }
+    
+    template<typename T>
+    void remove_component() {
+       	// remove component if found
+    }
         
    	id_t get_id() const noexcept { return id; }
     tag_t get_tag() const noexcept { return tag ;}
