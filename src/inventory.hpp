@@ -23,8 +23,8 @@ struct Inventory : Component<Inventory> {
         }
     }
 
-    Item get_item_by_index(unsigned int index) {
-        return items[index];
+    Item& get_item_by_index(unsigned int index) {
+        return *items[index];
     }
 
     std::vector<Item*> find_if(std::function<bool(const Item&)> func) {
