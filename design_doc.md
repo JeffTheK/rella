@@ -114,6 +114,18 @@ private:
 
   
 
+## Rake Tasks
+
+`rake debug` - compiles debug build
+
+`rake release` - compiles release build
+
+`rake test` - compiles a unit test exe and runs it
+
+`rake add_class` - creates a class in /src/ from a template
+
+`rake add_test` - creates test case in /test/ from a template
+
 
 
 ## Dev Tools
