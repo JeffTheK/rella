@@ -4,6 +4,7 @@
 #include <functional>
 #include "component.hpp"
 #include "item.hpp"
+#include "position.hpp"
 
 struct Inventory : Component<Inventory> {
     unsigned int max_items = 0;
@@ -23,6 +24,10 @@ struct Inventory : Component<Inventory> {
         }
     }
 
+    void drop_item_by_index(unsigned int index) {
+        items.erase(items.begin() + index);
+    }
+
     Item& get_item_by_index(unsigned int index) {
         return *items[index];
     }
@@ -35,7 +40,7 @@ struct Inventory : Component<Inventory> {
                 out.push_back(item_ptr);
             }
         }
-        return out; 
+        return out;
     }
 
     unsigned int size() const noexcept { return items.size(); }
