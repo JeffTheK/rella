@@ -14,3 +14,22 @@ task :test do
     system("#{CXX} #{TEST_FLAGS} #{SRC_FILES} #{TEST_FILES} #{OUT}")
     system("./bin/test")
 end
+
+task :add_test do
+    file_name = ARGV[1]
+    raise('file already exists') if (File.exist?("test/#{file_name}"))
+
+    text = <<-TEXT
+#include "../include/doctest.h"
+#include "../src/#{file_name}.hpp"
+
+TEST_CASE("") {
+
+}
+TEXT
+
+    File.open("test/#{file_name}_test.cpp", 'w') do |f|
+        f << text
+    end
+    exit
+end
