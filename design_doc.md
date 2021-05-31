@@ -125,8 +125,8 @@ private:
 - [x] Id
   - [x] get_free_id()
   - [x] get_type_id()
-- [ ] Component
-  - [ ] check id
+- [x] Component
+  - [x] check id
 - [ ] Inventory
   - [x] size()
   - [ ] get_item_by_index()
