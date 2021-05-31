@@ -112,7 +112,30 @@ private:
 
 - [x] Item
 
-  
+
+
+
+## Unit Tests
+
+- [ ] Entity
+  - [ ] add_component()
+  - [ ] remove_component()
+  - [ ] get_component()
+  - [ ] has_component()
+- [x] Id
+  - [x] get_free_id()
+  - [x] get_type_id()
+- [ ] Component
+  - [ ] check id
+- [ ] Inventory
+  - [x] size()
+  - [ ] get_item_by_index()
+  - [ ] find_item()
+  - [ ] add_item()
+
+
+
+
 
 ## Rake Tasks
 
