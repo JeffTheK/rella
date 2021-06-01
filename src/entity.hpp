@@ -10,7 +10,7 @@ using tag_t = std::string;
 // The entity is a general purpose object that represents our player, enemies items.
 class Entity {
 public:
-    Entity(tag_t tag_, id_t id) {
+    Entity(tag_t tag_) {
         tag = tag_;
         id = get_free_id();
     }
