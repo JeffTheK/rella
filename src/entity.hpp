@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include <vector>
+#include <map>
 #include "id.hpp"
 #include "component.hpp"
 
@@ -17,7 +17,7 @@ public:
     
     template<typename T>
     T* add_component(const T comp) {
-        return components.push_back(new T(comp))
+        auto comp = components.insert({ comp.class_id(), new T(comp) })
     }
         
    	id_t get_id() const noexcept { return id; }
@@ -25,5 +25,5 @@ public:
 private:
    	id_t id = 0;
     tag_t tag = "";
-   	std::vector<Component<void>*> components;
+   	std::map<id_t type_id, Component<void>*> components;
 };
