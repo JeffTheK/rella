@@ -25,5 +25,5 @@ public:
 private:
    	id_t id = 0;
     tag_t tag = "";
-   	std::map<id_t type_id, Component<void>*> components;
+   	std::map<id_t, Component<void>*> components;
 };
