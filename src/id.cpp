@@ -6,3 +6,7 @@ id_t get_free_id() {
     free_id++;
     return free_id;
 }
+
+void reset_free_id() {
+    free_id = 0;
+}
