@@ -17,7 +17,7 @@ public:
     
     template<typename T>
     T* add_component(const T comp) {
-        auto comp = components.insert({ comp.class_id(), new T(comp) })
+        auto comp = components.insert({ comp.class_id(), new T(comp) });
     }
         
    	id_t get_id() const noexcept { return id; }
