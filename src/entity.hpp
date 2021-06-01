@@ -14,6 +14,11 @@ public:
         tag = tag_;
         id = get_free_id();
     }
+    
+    template<typename T>
+    T* add_component(const T comp) {
+        return components.push_back(new T(comp))
+    }
         
    	id_t get_id() const noexcept { return id; }
     tag_t get_tag() const noexcept { return tag ;}
