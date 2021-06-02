@@ -106,8 +106,8 @@ private:
 - [x] Faction - faction (player, enemy, neutral)
 - [x] Inventory - max_items, items, size(), get_item_by_index(), find_item(), add_item()
 - [x] Item
-- [ ] Consumable - has a list of components that affect holder upon usage
-- [ ] Equipable - slot enum, 
+- [x] Consumable - has a list of components that affect holder upon usage
+- [x] Equipable - slot enum, slots
 
 
 
