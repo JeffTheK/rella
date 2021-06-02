@@ -54,3 +54,26 @@ TEXT
     end
     exit
 end
+
+task :add_component do
+    file_name = ARGV[1]
+    raise('file already exists') if (File.exist?("src/#{file_name}.hpp"))
+
+    text = <<-TEXT
+#pragma once
+
+#include "component.hpp"
+
+class #{file_name} : Component<#{file_name}> {
+public:
+
+private:
+
+};
+TEXT
+
+    File.open("src/#{file_name}.hpp", 'w') do |f|
+        f << text
+    end
+    exit
+end
