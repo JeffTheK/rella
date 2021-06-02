@@ -17,7 +17,6 @@ end
 task :test do
     TEST_FLAGS = '-Wall -Wextra -static-libstdc++ -O0 -g'
     OUT = '-o bin/test'
-    p SRC_FILES;
     system('rake clean')
     system("#{CXX} #{TEST_FLAGS} #{SRC_FILES} #{TEST_FILES} #{OUT}")
     system("./bin/test")
