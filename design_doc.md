@@ -60,6 +60,10 @@ id_t get_free_id() {
     return free_id;
 }
 
+void reset_free_id() {
+    free_id = 0;
+}
+
 template<typename TYPE>
 id_t get_type_id() {
     reinterpret_cast<id_t>(typeid(TYPE).name());
@@ -125,6 +129,7 @@ private:
 - [x] Id
   - [x] get_free_id()
   - [x] get_type_id()
+  - [ ] reset_free_id()
 - [x] Component
   - [x] check id
 - [ ] Inventory
