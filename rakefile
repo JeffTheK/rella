@@ -15,6 +15,12 @@ task :test do
     system("./bin/test")
 end
 
+##
+#   HELP TASKS
+#
+#   note: we use exit at the end to stop rake from treating arguments as other tasks
+##
+
 task :add_test do
     file_name = ARGV[1]
     raise('file already exists') if (File.exist?("test/#{file_name}"))
