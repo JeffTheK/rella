@@ -97,24 +97,17 @@ private:
 ## Components that we need
 
 - [x] Position - x, y
-
 - [x] Health - min, max, current, regen
-
 - [x] Mana - min, max,  current, regen
-
 - [x] Hunger - min, max, current, rate
-
 - [x] Damage - min, max
-
 - [x] Name - name
-
 - [ ] EnemyAI
-
 - [x] Faction - faction (player, enemy, neutral)
-
 - [x] Inventory - max_items, items, size(), get_item_by_index(), find_item(), add_item()
-
 - [x] Item
+- [ ] Consumable - has a list of components that affect holder upon usage
+- [ ] Equipable - slot enum, 
 
 
 
