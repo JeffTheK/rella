@@ -2,7 +2,7 @@ require 'rake/clean'
 
 CXX = 'g++'
 
-SRC_FILES = 'src/**.cpp'
+SRC_FILES = Dir.glob('src/**').reject{ |f| f.end_with?('.hpp') || f == 'src/main.cpp' }.join(' ')
 TEST_FILES = 'test/**.cpp'
 
 CLEAN.include 'bin/**'
@@ -10,6 +10,7 @@ CLEAN.include 'bin/**'
 task :test do
     TEST_FLAGS = '-Wall -Wextra -static-libstdc++ -O0 -g'
     OUT = '-o bin/test'
+    p SRC_FILES;
     system('rake clean')
     system("#{CXX} #{TEST_FLAGS} #{SRC_FILES} #{TEST_FILES} #{OUT}")
     system("./bin/test")
