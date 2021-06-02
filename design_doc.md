@@ -129,7 +129,7 @@ private:
 - [x] Id
   - [x] get_free_id()
   - [x] get_type_id()
-  - [ ] reset_free_id()
+  - [x] reset_free_id()
 - [x] Component
   - [x] check id
 - [ ] Inventory
