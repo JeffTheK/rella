@@ -7,6 +7,13 @@ TEST_FILES = 'test/**.cpp'
 
 CLEAN.include 'bin/**'
 
+task :debug do
+    DEBUG_FLAGS = '-Wall -Wextra -static-libstdc++ -O0 -g'
+    OUT = '-o bin/debug'
+    system('rake clean')
+    system("#{CXX} #{DEBUG_FLAGS} #{SRC_FILES} src/main.cpp #{OUT}")
+end
+
 task :test do
     TEST_FLAGS = '-Wall -Wextra -static-libstdc++ -O0 -g'
     OUT = '-o bin/test'
