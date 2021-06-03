@@ -114,8 +114,8 @@ private:
 
 ## Unit Tests
 
-- [ ] Entity
-  - [ ] add_component()
+- [x] Entity
+  - [x] add_component()
   - [x] remove_component()
   - [x] get_component()
   - [x] has_component()

@@ -10,6 +10,12 @@ TEST_CASE("id") {
     CHECK(entity2.get_id() == 2);
 }
 
+TEST_CASE("add_component") {
+    auto entity = Entity{"foo"};
+    entity.add_component<Health>({0,0,0,0});
+    CHECK(entity.has_component<Health>());
+}
+
 TEST_CASE("remove_component") {
     auto entity = Entity{"foo"};
     entity.add_component<Health>({0,0,0,0});
