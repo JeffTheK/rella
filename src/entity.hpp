@@ -39,7 +39,7 @@ public:
         
         if (result != components.end()) {
             auto ptr = result->second;
-            return static_cast<T*>(ptr);
+            return reinterpret_cast<T*>(ptr);
         } else {
             return nullptr;
         }
