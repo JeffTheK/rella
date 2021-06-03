@@ -34,6 +34,18 @@ public:
     }
     
     template<typename T>
+    T* get_component() {
+        auto result = components.find(get_type_id<T>());
+        
+        if (result != components.end()) {
+            auto ptr = result->second;
+            return static_cast<T*>(ptr);
+        } else {
+            return nullptr;
+        }
+    }
+    
+    template<typename T>
     bool has_component() {
         auto result = components.find(get_type_id<T>());
         
