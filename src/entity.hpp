@@ -25,9 +25,7 @@ public:
     
     template<typename T>
     void remove_component() {
-        auto result = std::find_if(components.begin(), components.end(),
-        [](Component<void>* comp){ comp->get_class_id() == get_type_id<T>(); }
-        );
+        auto result = components.find(get_type_id<T>());
 
         if (result != components.end()) {
             delete result;
@@ -37,9 +35,7 @@ public:
     
     template<typename T>
     bool has_component() {
-        auto result = std::find_if(components.begin(), components.end(),
-        [](Component<void>* comp){ comp->get_class_id() == get_type_id<T>(); }
-        );
+        auto result = components.find(get_type_id<T>());
         
         return result != components.end();
     }
