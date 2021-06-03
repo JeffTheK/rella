@@ -128,7 +128,8 @@ private:
 - [ ] Inventory
   - [x] size()
   - [ ] get_item_by_index()
-  - [ ] find_item()
+  - [ ] drop_item_by_index()
+  - [ ] find_if()
   - [ ] add_item()
 
 
