@@ -117,7 +117,7 @@ private:
 - [ ] Entity
   - [x] add_component()
   - [ ] remove_component()
-  - [ ] get_component()
+  - [x] get_component()
   - [x] has_component()
 - [x] Id
   - [x] get_free_id()
