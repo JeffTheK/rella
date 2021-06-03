@@ -20,6 +20,7 @@ public:
     T* add_component(const T comp) {
         auto ptr = new T(comp);
         auto result = components.insert({ comp.get_class_id(), reinterpret_cast<Component<void>*>(ptr) });
+        return ptr;
     }
     
     template<typename T>
