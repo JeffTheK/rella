@@ -32,6 +32,15 @@ public:
             components.erase(result);
         }
     }
+    
+    template<typename T>
+    bool has_component() {
+        auto result = std::find_if(components.begin(), components.end(),
+        [](Component<void>* comp){ comp->class_id() == get_type_id<T>(); }
+        );
+        
+        return result != components.end();
+    }
         
    	id_t get_id() const noexcept { return id; }
     tag_t get_tag() const noexcept { return tag ;}
