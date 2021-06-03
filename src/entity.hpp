@@ -18,13 +18,13 @@ public:
     
     template<typename T>
     T* add_component(const T comp) {
-        auto result = components.insert({ comp.class_id(), new T(comp) });
+        auto result = components.insert({ comp.get_class_id(), new T(comp) });
     }
     
     template<typename T>
     void remove_component() {
         auto result = std::find_if(components.begin(), components.end(),
-        [](Component<void>* comp){ comp->class_id() == get_type_id<T>(); }
+        [](Component<void>* comp){ comp->get_class_id() == get_type_id<T>(); }
         );
 
         if (result != components.end()) {
@@ -36,7 +36,7 @@ public:
     template<typename T>
     bool has_component() {
         auto result = std::find_if(components.begin(), components.end(),
-        [](Component<void>* comp){ comp->class_id() == get_type_id<T>(); }
+        [](Component<void>* comp){ comp->get_class_id() == get_type_id<T>(); }
         );
         
         return result != components.end();
