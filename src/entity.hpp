@@ -2,6 +2,7 @@
 
 #include <string>
 #include <map>
+#include <algorithm>
 #include "id.hpp"
 #include "component.hpp"
 
@@ -18,6 +19,18 @@ public:
     template<typename T>
     T* add_component(const T comp) {
         auto result = components.insert({ comp.class_id(), new T(comp) });
+    }
+    
+    template<typename T>
+    void remove_component() {
+        auto result = std::find_if(components.begin(), components.end(),
+        [](Component<void>* comp){ comp->class_id() == get_type_id<T>(); }
+        );
+
+        if (result != components.end()) {
+            delete result;
+            components.erase(result);
+        }
     }
         
    	id_t get_id() const noexcept { return id; }
