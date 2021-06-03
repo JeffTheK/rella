@@ -18,7 +18,8 @@ public:
     
     template<typename T>
     T* add_component(const T comp) {
-        auto result = components.insert({ comp.get_class_id(), new T(comp) });
+        auto ptr = new T(comp);
+        auto result = components.insert({ comp.get_class_id(), ptr });
     }
     
     template<typename T>
