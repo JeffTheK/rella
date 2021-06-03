@@ -118,7 +118,7 @@ private:
   - [x] add_component()
   - [ ] remove_component()
   - [ ] get_component()
-  - [ ] has_component()
+  - [x] has_component()
 - [x] Id
   - [x] get_free_id()
   - [x] get_type_id()
