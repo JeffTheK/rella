@@ -8,3 +8,11 @@ TEST_CASE("size") {
     inv.add_item({});
     CHECK(inv.size() == 1);
 }
+
+TEST_CASE("add_item") {
+    auto inv = Inventory{1};
+    inv.add_item({});
+    CHECK(inv.size() == 1);
+    inv.add_item({});
+    CHECK(inv.size() == 1);
+}
