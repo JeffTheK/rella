@@ -28,7 +28,7 @@ public:
         auto result = components.find(get_type_id<T>());
 
         if (result != components.end()) {
-            delete result;
+            delete result->second;
             components.erase(result);
         }
     }
