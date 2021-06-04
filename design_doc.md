@@ -92,6 +92,39 @@ private:
 
 
 
+## Json items structure
+
+````json
+{
+    "items": [
+        {
+			"components": [
+                {
+                    "type": "Health"
+                    "min": 0,
+                    "max": 10,
+                    "current": 10,
+                    "regen": 1
+                }
+            ]
+        },
+        {
+            "components": [
+                {
+                    "type": "Mana"
+                    "min": 0,
+                    "max": 10,
+                    "current": 10,
+                    "regen": 1
+                }
+            ]
+        }
+    ]
+}
+````
+
+
+
 
 
 ## Components that we need
