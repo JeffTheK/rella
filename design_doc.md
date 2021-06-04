@@ -92,6 +92,29 @@ private:
 
 
 
+## Json loading components
+
+`load_json_components(json components_json)` - loads components from json
+
+````c++
+std::vector<Components<void>> load_json_components(json components_json) {
+    // get type of component
+    // iterate over each json component
+    switch(type) {
+    case "Health":
+    	Health::load_from_json(json_component);
+    case "Mana":
+		Mana::load_from_json(json_component);
+    default:
+        assert(false);
+    }
+}
+````
+
+
+
+
+
 ## Json items structure
 
 ````json
