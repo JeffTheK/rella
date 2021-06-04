@@ -190,6 +190,18 @@ std::vector<Components<void>> load_json_components(json components_json) {
 
 
 
+## Json Loading
+
+- [ ] Position
+- [ ] Health
+- [ ] Mana
+- [ ] Hunger
+- [ ] Name
+- [ ] Faction
+- [ ] Consumable
+- [ ] Damage
+- [ ] Equipable
+
 
 
 ## Rake Tasks
