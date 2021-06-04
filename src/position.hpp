@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../include/json.hpp"
 #include "component.hpp"
 
 struct Position : Component<Position> {
@@ -10,4 +11,6 @@ struct Position : Component<Position> {
 
     unsigned int x = 0;
     unsigned int y = 0;
+    
+    static Position load_from_json(const json component_json);
 };
