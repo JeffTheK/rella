@@ -207,7 +207,7 @@ std::vector<Components<void>> load_json_components(json components_json) {
 ## Json Loading Tests
 
 - [x] Position
-- [ ] Health
+- [x] Health
 - [ ] Mana
 - [ ] Hunger
 - [ ] Name
