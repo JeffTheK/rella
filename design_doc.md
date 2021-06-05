@@ -192,7 +192,7 @@ std::vector<Components<void>> load_json_components(json components_json) {
 
 ## Json Loading
 
-- [ ] Position
+- [x] Position
 - [ ] Health
 - [ ] Mana
 - [ ] Hunger
@@ -206,7 +206,7 @@ std::vector<Components<void>> load_json_components(json components_json) {
 
 ## Json Loading Tests
 
-- [ ] Position
+- [x] Position
 - [ ] Health
 - [ ] Mana
 - [ ] Hunger
