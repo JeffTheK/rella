@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../include/json.hpp"
 #include "component.hpp"
 
 struct Mana : Component<Mana> {
@@ -14,4 +15,6 @@ struct Mana : Component<Mana> {
         current = current_;
         regen = regen_;
     }
+    
+    static Mana load_from_json(json component_json);
 };
