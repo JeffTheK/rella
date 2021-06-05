@@ -47,6 +47,30 @@ TEXT
     exit
 end
 
+task :add_json_test do
+    file_name = ARGV[1]   
+
+    text = <<-TEXT
+TEST_CASE("load_from_json") {
+    auto text = R"(
+{
+    "type": "Comp",
+    
+}
+    )";
+  
+    auto comp_json = nlohmann::json::parse(text);
+    auto comp = Position::load_from_json(comp_json);
+}
+TEXT
+
+    File.open("test/#{file_name}_test.cpp", 'a') do |f|
+        f << text
+    end
+
+    exit
+end
+
 task :add_class do
     file_name = ARGV[1]
     raise('file already exists') if (File.exist?("src/#{file_name}.hpp"))
