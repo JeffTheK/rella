@@ -210,7 +210,7 @@ std::vector<Components<void>> load_json_components(json components_json) {
 - [x] Health
 - [x] Mana
 - [x] Hunger
-- [ ] Name
+- [x] Name
 - [ ] Faction
 - [ ] Consumable
 - [ ] Damage
