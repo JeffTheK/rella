@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../include/json.hpp"
 #include "component.hpp"
 
 struct Faction : Component<Faction> {
@@ -15,4 +16,6 @@ struct Faction : Component<Faction> {
     Faction(Faction::Type type_) {
         type = type_;
     }
+    
+    static Faction load_from_json(json component_json);
 };
