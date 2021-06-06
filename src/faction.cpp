@@ -1,7 +1,7 @@
 #include "faction.hpp"
 #include <string>
 
-static Faction load_from_json(json component_json) {
+Faction Faction::load_from_json(json component_json) {
     auto str = component_json["faction"].get<std::string>();
     auto faction = Faction::Type::null;
     
