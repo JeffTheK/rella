@@ -11,10 +11,10 @@ struct Faction : Component<Faction> {
         neutral
     };
 
-    Type type = Type::null;
+    Type faction = Type::null;
 
     Faction(Faction::Type type_) {
-        type = type_;
+        faction = type_;
     }
     
     static Faction load_from_json(json component_json);

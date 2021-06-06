@@ -2,20 +2,20 @@
 #include <string>
 
 static Faction load_from_json(json component_json) {
-    auto str = component_json["type"].get<std::string>();
-    auto type = Faction::Type::null;
+    auto str = component_json["faction"].get<std::string>();
+    auto faction = Faction::Type::null;
     
     if (str == "null") {
-        type = Faction::Type::null;
+        faction = Faction::Type::null;
     } else if (str == "player") {
-        type = Faction::Type::player;
+        faction = Faction::Type::player;
     } else if (str == "enemy") {
-        type = Faction::Type::enemy;
+        faction = Faction::Type::enemy;
     } else if (str == "neutral") {
-        type = Faction::Type::neutral;
+        faction = Faction::Type::neutral;
     } else {
         assert(false);
     }
 
-    return Faction{type};
+    return Faction{faction};
 }
