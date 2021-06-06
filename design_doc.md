@@ -123,7 +123,7 @@ std::vector<Components<void>> load_json_components(json components_json) {
         {
 			"components": [
                 {
-                    "type": "Health"
+                    "type": "Health",
                     "min": 0,
                     "max": 10,
                     "current": 10,
@@ -134,7 +134,7 @@ std::vector<Components<void>> load_json_components(json components_json) {
         {
             "components": [
                 {
-                    "type": "Mana"
+                    "type": "Mana",
                     "min": 0,
                     "max": 10,
                     "current": 10,
