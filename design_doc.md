@@ -198,7 +198,7 @@ std::vector<Components<void>> load_json_components(json components_json) {
 - [x] Hunger
 - [x] Name
 - [x] Faction
-- [ ] Consumable
+- [ ] Consumable - FIXME
 - [ ] Damage
 - [ ] Equipable
 
@@ -212,7 +212,7 @@ std::vector<Components<void>> load_json_components(json components_json) {
 - [x] Hunger
 - [x] Name
 - [x] Faction
-- [ ] Consumable
+- [ ] Consumable - FIXME
 - [ ] Damage
 - [ ] Equipable
 
