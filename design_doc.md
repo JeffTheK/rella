@@ -169,7 +169,7 @@ int main() {
 ## Loop
 
 ````c++
-static boold game_is_running = true;
+static bool game_is_running = true;
 
 void loop() {
     auto result = handle_input(); // returns bool
