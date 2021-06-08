@@ -1,7 +1,7 @@
 #include "equipable.hpp"
 
-Equipable::Equipable(std::vector<Equipable::Slot> slots_) {
-    slots = slots_;
+Equipable::Equipable(Equipable::Slot slot_) {
+    slot = slot_;
 }
 
 Equipable load_from_json(json component_json) {

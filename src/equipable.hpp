@@ -1,12 +1,10 @@
 #pragma once
 
-#include <vector>
 #include "../include/json.hpp"
 #include "component.hpp"
 
-class Equipable : Component<Equipable> {
+struct Equipable : Component<Equipable> {
 public:
-
     enum class Slot {
       null,
       armor,
@@ -14,11 +12,11 @@ public:
       ring
     };
 
-    Equipable(std::vector<Equipable::Slot> slots_);
+    Equipable(Equipable::Slot slot_);
     
-    auto get_slots() const noexcept { return slots; }
+    auto get_slot() const noexcept { return slot; }
     
     static Equipable load_from_json(json component_json);
 private:
-    std::vector<Slot> slots;
+    Slot slot;
 };
