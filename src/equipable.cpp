@@ -4,7 +4,7 @@ Equipable::Equipable(Equipable::Slot slot_) {
     slot = slot_;
 }
 
-Equipable load_from_json(json component_json) {
+Equipable Equipable::load_from_json(json component_json) {
     auto str = component_json["slot"].get<std::string>();
     auto slot = Equipable::Slot::null;
     if (str == "null") {
