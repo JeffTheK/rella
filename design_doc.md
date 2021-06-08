@@ -183,6 +183,33 @@ void loop() {
 
 
 
+## Input Handling
+
+````c++
+std::string get_input() {
+    // returns input
+}
+
+// returns true if player made action that will end hit turn and require to update ai
+bool handle_input() {
+ 	auto input = get_input();
+    
+    if (input == "exit" &&
+       input == "quit") {
+        game_is_running = false;
+        return false;
+    } else if (input == "some_command") {
+        // ...
+    } else {
+        // command not found
+        // warn player
+        return false;
+    }
+}
+````
+
+
+
 
 
 ## Components that we need
