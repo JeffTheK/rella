@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../include/json.hpp"
 #include "component.hpp"
 
 struct Damage : Component<Damage> {
@@ -10,4 +11,6 @@ struct Damage : Component<Damage> {
         min = min_;
         max = max_;
     }
+    
+    static Damage load_from_json(json component_json);
 };
