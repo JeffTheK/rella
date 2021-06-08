@@ -150,6 +150,24 @@ std::vector<Components<void>> load_json_components(json components_json) {
 
 
 
+## Main
+
+````c++
+int main() {
+    generate_map();
+    generate_player();
+    generate_ai();
+   	
+    while(game_is_running == true) {
+        loop();
+    }
+}
+````
+
+
+
+
+
 ## Components that we need
 
 - [x] Position - x, y
