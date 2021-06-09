@@ -339,5 +339,5 @@ void generate_player() {
 ## Dev Tools
 
 - Rake
-- Doctest
+- [onqtam](https://github.com/onqtam)/**[doctest](https://github.com/onqtam/doctest)** - for unit testing
 
