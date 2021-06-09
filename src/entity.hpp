@@ -59,3 +59,5 @@ private:
     tag_t tag = "";
    	std::map<id_t, Component<void>*> components;
 };
+
+static std::map<id_t, Entity*> entities; // Holds all our entities
