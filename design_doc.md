@@ -210,6 +210,25 @@ bool handle_input() {
 
 
 
+## Player Generation
+
+````c++
+void generate_player() {
+    // create entity
+    // add random position
+    // add inventory with random starting items
+    // add random name
+    // add player faction
+    // add hunger
+    // add health
+    // add mana
+}
+````
+
+
+
+
+
 ## Player Commands
 
 - [ ] quit, exit - terminates the program( sets game_is_running to false)
