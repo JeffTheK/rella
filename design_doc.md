@@ -331,7 +331,7 @@ void generate_player() {
 
 ## Runtime libraries
 
-- Nlohmann Json
+- [nlohmann](https://github.com/nlohmann)/**[json](https://github.com/nlohmann/json)** - for json
 - [effolkronium](https://github.com/effolkronium)/**[random](https://github.com/effolkronium/random)** - for random number generation
 
 
