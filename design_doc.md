@@ -222,6 +222,8 @@ void generate_player() {
     // add hunger
     // add health
     // add mana
+    // add entity to container
+    // set player_entity to pointer
 }
 ````
 
