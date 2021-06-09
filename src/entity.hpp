@@ -61,3 +61,5 @@ private:
 };
 
 static std::map<id_t, Entity*> entities; // Holds all our entities
+
+static Entity* player_entity = nullptr;
