@@ -210,6 +210,20 @@ bool handle_input() {
 
 
 
+## Player Commands
+
+- [ ] quit, exit - terminates the program( sets game_is_running to false)
+- [ ] help - prints all commands and descriptions
+- [ ] north,  n, k - move ^
+- [ ] east,   e  l- move -->
+- [ ] south, s   j - move v
+- [ ] west,  w  h- move <--
+- [ ] pickup - take item on the ground. If multiple items make list
+- [ ] drop - creates a list of items player has with indexes and drops item by index or types something else to quit
+- [ ] attack, a - choose enemy to attack
+- [ ] inventory, i - prints items player has
+- [ ] inspect - makes a list of npcs to enspect. Upon choosing prints their info like stats, health, faction
+
 
 
 ## Components that we need
