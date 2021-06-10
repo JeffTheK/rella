@@ -1,5 +1,6 @@
 #include "name.hpp"
 #include "../include/json.hpp"
+#include "../include/random.hpp"
 #include <vector>
 #include <fstream>
 
@@ -27,3 +28,12 @@ void Name::load_random_names() {
     file.close();
 }
 
+Name Name::random() {
+    if (names.empty()) {
+        load_random_names();
+    }
+    
+    using Random = effolkronium::random_static;
+    auto number = Random::get(0, static_cast<int>(names.size() - 1));   
+    return names[number];
+}
