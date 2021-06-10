@@ -17,3 +17,12 @@ TEST_CASE("load_from_json") {
 TEST_CASE("load_random_names") {
     Name::load_random_names();
 }
+
+TEST_CASE("random") {
+    for (size_t i = 0; i < 1000; i++)
+    {
+        auto result = Name::random();
+        CHECK(result.name != "");
+    }
+    
+}
