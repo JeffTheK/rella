@@ -15,4 +15,6 @@ public:
     const Type terrain = Type::null;
     
     Terrain(Terrain::Type terrain_) : terrain(terrain_) {}
+    
+    static Terrain random();
 };
