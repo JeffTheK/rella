@@ -250,6 +250,7 @@ void generate_player() {
 - [ ] attack, a - choose enemy to attack
 - [ ] inventory, i - prints items player has
 - [ ] inspect - makes a list of npcs to enspect. Upon choosing prints their info like stats, health, faction
+- [ ] look - lists all objects that are on the same position as player
 
 
 
