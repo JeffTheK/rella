@@ -268,6 +268,7 @@ void generate_player() {
 - [x] Item
 - [x] Consumable - has a list of components that affect holder upon usage
 - [x] Equipable - slot enum, slots
+- [ ] Terrain - terrain, types: null, forest, mountain, plains, desert, random()
 
 
 
