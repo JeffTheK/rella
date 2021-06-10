@@ -12,4 +12,6 @@ struct Name : Component<Name> {
     }
     
     static Name load_from_json(json component_json);
+    
+    static void load_random_names();
 };
