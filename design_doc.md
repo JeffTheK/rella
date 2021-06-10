@@ -183,7 +183,8 @@ void loop() {
 
 
 
-## Input Handling
+- [x] ##  Input Handling
+
 
 ````c++
 std::string get_input() {
@@ -210,7 +211,8 @@ bool handle_input() {
 
 
 
-## Player Generation
+- [x] ##  Player Generation
+
 
 ````c++
 void generate_player() {
@@ -231,7 +233,7 @@ void generate_player() {
 
 ## Name
 
-random() - returns random picked name from templates (if templates are empty load them) they are stored in data/names.json
+- [x] random() - returns random picked name from templates (if templates are empty load them) they are stored in data/names.json	
 
 
 
