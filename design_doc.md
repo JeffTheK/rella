@@ -229,6 +229,10 @@ void generate_player() {
 
 
 
+## Name
+
+random() - returns random picked name from templates (if templates are empty load them) they are stored in data/names.json
+
 
 
 ## Player Commands
