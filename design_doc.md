@@ -164,6 +164,8 @@ int main() {
 }
 ````
 
+generate_map() - const size_x, size_y, generates terrains
+
 
 
 ## Loop
