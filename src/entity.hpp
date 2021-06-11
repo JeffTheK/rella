@@ -3,6 +3,8 @@
 #include <string>
 #include <map>
 #include <algorithm>
+#include <functional>
+#include <vector>
 #include "id.hpp"
 #include "component.hpp"
 
@@ -63,3 +65,5 @@ private:
 static std::map<id_t, Entity*> entities; // Holds all our entities
 
 static Entity* player_entity = nullptr;
+
+std::vector<Entity*> find_entity_if(std::function<bool(const Entity&)> func); 
