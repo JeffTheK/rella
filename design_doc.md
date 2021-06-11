@@ -164,7 +164,7 @@ int main() {
 }
 ````
 
-generate_map() - const size_x, size_y, generates terrains
+- [x] generate_map() - const size_x, size_y, generates terrains
 
 
 
