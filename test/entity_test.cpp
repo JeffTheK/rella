@@ -38,3 +38,20 @@ TEST_CASE("has_component") {
     CHECK(entity.has_component<Health>());
     CHECK_FALSE(entity.has_component<Mana>());
 }
+
+TEST_CASE("find_entities_if") {
+    auto e1 = new Entity{"a"};
+    auto e2 = new Entity{"a"};
+    auto e3 = new Entity{"b"};
+    entities.insert({e1->get_id(), e1});
+    entities.insert({e2->get_id(), e2});
+    entities.insert({e3->get_id(), e3});
+    
+    auto func = [](const Entity& e){
+        return e.get_tag() == "a";  
+    };
+    auto result = find_entities_if(func);
+    CHECK(result.size() == 2);
+    CHECK(result[0] != nullptr);
+    CHECK(result[1] != nullptr);
+}
