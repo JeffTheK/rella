@@ -15,4 +15,6 @@ struct Position : Component<Position> {
     static Position load_from_json(const json component_json);
     
     static Position random();
+    
+    auto operator<=>(Position const& other) const = default;
 };
