@@ -1,5 +1,6 @@
 #include "loop.hpp"
 #include "input.hpp"
+#include "ai.hpp"
 
 void start_loop() {
     while (game_is_running == true) {
