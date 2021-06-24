@@ -168,7 +168,8 @@ int main() {
 
 
 
-## Loop
+- [x] ## Loop
+
 
 ````c++
 static bool game_is_running = true;
