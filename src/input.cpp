@@ -51,7 +51,7 @@ bool handle_input() {
             for(auto e : entities) {
                 auto name = e->get_component<Name>();
                 if (name != nullptr) {
-                    msg += name.name; msg += " ";
+                    msg += name->name; msg += " ";
                 }
             }
             std::cout << msg;
