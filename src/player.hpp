@@ -1,3 +1,3 @@
 #pragma once
 
-static void generate_player();
+void generate_player();
