@@ -41,8 +41,9 @@ bool handle_input() {
     }
     else if (input == "look") {
         auto pos = player_entity->get_component<Position>();
-        auto func = [pos](Entity& e){ 
-            return e.get_component<Position>()* == pos*;
+        auto func = [pos](Entity& e) -> bool { 
+            auto other_pos = e.get_component<Position>();
+            return other_pos* == pos*;
         };
         auto entities = find_entities_if(func);
         if (!entities.empty())
