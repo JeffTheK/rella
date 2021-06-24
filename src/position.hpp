@@ -16,5 +16,5 @@ struct Position : Component<Position> {
     
     static Position random();
     
-    auto operator<=>(Position const& other) const = default;
+    auto operator==(Position const& other) { return x == other.x && y == other.y; }
 };
