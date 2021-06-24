@@ -246,7 +246,7 @@ void generate_player() {
 - [ ] help - prints all commands and descriptions
 - [x] north,  n, k - move ^
 - [x] east,   e  l- move -->
-- [ ] south, s   j - move v
+- [x] south, s   j - move v
 - [ ] west,  w  h- move <--
 - [ ] pickup - take item on the ground. If multiple items make list
 - [ ] drop - creates a list of items player has with indexes and drops item by index or types something else to quit

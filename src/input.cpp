@@ -28,6 +28,11 @@ bool handle_input() {
         pos->x++;
         return true;
     }
+    else if (input == "south" || input == "s" || input == "j") { // v
+        auto pos = player_entity->get_component<Position>();
+        pos->y--;
+        return true;
+    }
     else {
         auto msg = "command '" + input + "' not found\n";
         std::cout << msg;
