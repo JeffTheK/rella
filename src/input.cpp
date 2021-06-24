@@ -3,6 +3,7 @@
 #include "position.hpp"
 #include "player.hpp"
 #include "entity.hpp"
+#include "name.hpp"
 
 std::string get_input() {
     std::string str;
@@ -37,6 +38,26 @@ bool handle_input() {
         auto pos = player_entity->get_component<Position>();
         pos->x--;
         return true;
+    }
+    else if (input == "look") {
+        auto pos = player_entity->get_component<Position>();
+        auto func = [](const Entity& e){ 
+            return e.get_component<Position>()* == pos*;
+        }
+        auto entities = find_entities_if(func);
+        if (!entities.empty())
+            std::string msg = "You see ";
+            for(auto e : entities) {
+                auto name = e->get_component<Name>();
+                if (name != nullptr) {
+                    msg += name.name; msg += " ";
+                }
+            }
+            std::cout << msg;
+        } else {
+            std::cout << "You see nothing";
+        }
+        return false;
     }
     else {
         auto msg = "command '" + input + "' not found\n";
