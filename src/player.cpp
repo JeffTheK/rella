@@ -18,7 +18,7 @@ void generate_player() {
     const auto mana_regen = 1;
 
     auto entity = new Entity{"player"};
-    // entity->add_component<Position>(Position.random()); // FIXME implement this
+    entity->add_component<Position>(Position::random());
     entity->add_component<Inventory>({max_items});
     entity->add_component<Name>(Name::random());
     entity->add_component<Faction>({Faction::Type::player});
