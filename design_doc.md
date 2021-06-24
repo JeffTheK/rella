@@ -245,7 +245,7 @@ void generate_player() {
 - [x] quit, exit - terminates the program( sets game_is_running to false)
 - [ ] help - prints all commands and descriptions
 - [x] north,  n, k - move ^
-- [ ] east,   e  l- move -->
+- [x] east,   e  l- move -->
 - [ ] south, s   j - move v
 - [ ] west,  w  h- move <--
 - [ ] pickup - take item on the ground. If multiple items make list
