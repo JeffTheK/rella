@@ -1,5 +1,8 @@
 #include "input.hpp"
 #include "loop.hpp" // game_is_running bool
+#include "position.hpp"
+#include "player.hpp"
+#include "entity.hpp"
 
 std::string get_input() {
     std::string str;
@@ -14,7 +17,13 @@ bool handle_input() {
        input == "quit") {
         game_is_running = false;
         return false;
-    } else {
+    }
+    else if (input == "north" || input == "n" || input == "k") { // ^
+        auto pos = player_entity->get_component<Position>();
+        pos->y++;
+        return true;
+    }
+    else {
         auto msg = "command '" + input + "' not found\n";
         std::cout << msg;
         return false;
