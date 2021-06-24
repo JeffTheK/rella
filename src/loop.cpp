@@ -1,6 +1,12 @@
 #include "loop.hpp"
 #include "input.hpp"
 
+void start_loop() {
+    while (game_is_running == true) {
+        loop();
+    }
+}
+
 void loop() {
     auto result = handle_input(); // returns bool
     // if true player made action/took turn and now we need to update ai
