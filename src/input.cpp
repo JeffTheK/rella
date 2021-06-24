@@ -46,7 +46,7 @@ bool handle_input() {
             return other_pos* == pos*;
         };
         auto entities = find_entities_if(func);
-        if (!entities.empty())
+        if (!entities.empty()) {
             std::string msg = "You see ";
             for(auto e : entities) {
                 auto name = e->get_component<Name>();
