@@ -43,7 +43,7 @@ bool handle_input() {
         auto pos = player_entity->get_component<Position>();
         auto func = [pos](const Entity& e){ 
             return e.get_component<Position>()* == pos*;
-        }
+        };
         auto entities = find_entities_if(func);
         if (!entities.empty())
             std::string msg = "You see ";
