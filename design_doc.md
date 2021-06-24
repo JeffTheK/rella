@@ -242,7 +242,7 @@ void generate_player() {
 
 ## Player Commands
 
-- [ ] quit, exit - terminates the program( sets game_is_running to false)
+- [x] quit, exit - terminates the program( sets game_is_running to false)
 - [ ] help - prints all commands and descriptions
 - [ ] north,  n, k - move ^
 - [ ] east,   e  l- move -->
