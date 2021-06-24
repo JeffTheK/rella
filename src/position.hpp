@@ -13,4 +13,6 @@ struct Position : Component<Position> {
     unsigned int y = 0;
     
     static Position load_from_json(const json component_json);
+    
+    static Position random();
 };
