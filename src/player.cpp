@@ -20,7 +20,7 @@ void generate_player() {
     auto entity = new Entity{"player"};
     // entity->add_component<Position>(Position.random()); // FIXME implement this
     entity->add_component<Inventory>({max_items});
-    // entity->add_component<Name>(Name.random()); FIXME implement this
+    entity->add_component<Name>(Name::random());
     entity->add_component<Faction>({Faction::Type::player});
     entity->add_component<Hunger>({0, max_hunger, max_hunger, hunger_rate});
     entity->add_component<Health>({0, max_health, max_health, health_regen});
