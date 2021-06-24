@@ -3,9 +3,9 @@
 #include "terrain.hpp"
 
 void generate_map() {
-    for (auto x = 0; x < size_x; x++)
+    for (unsigned int x = 0; x < size_x; x++)
     {
-        for (auto y = 0; y < size_y; y++)
+        for (unsigned int y = 0; y < size_y; y++)
         {
             std::string tag = "terrain"; // eg terrain7x12
             tag += std::to_string(x);
