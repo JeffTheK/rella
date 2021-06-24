@@ -35,5 +35,5 @@ Name Name::random() {
     
     using Random = effolkronium::random_static;
     auto number = Random::get(0, static_cast<int>(names.size() - 1));   
-    return names[number];
+    return Name{names[number]};
 }
