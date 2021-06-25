@@ -13,3 +13,5 @@ struct Command {
     Command(std::string key_, std::function<bool()> function_);
 };
 
+void add_command(Command cmd);
+
