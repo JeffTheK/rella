@@ -66,4 +66,5 @@ static std::map<id_t, Entity*> entities; // Holds all our entities
 
 static Entity* player_entity = nullptr;
 
-std::vector<Entity*> find_entities_if(std::function<bool(const Entity&)> func); 
+// note: I couldn't make entity& const
+std::vector<Entity*> find_entities_if(std::function<bool(Entity&)> func);
