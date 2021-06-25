@@ -9,4 +9,6 @@ void add_command(Command cmd) {
     commands.insert({cmd.key, cmd});
 }
 
-void init_commands();
+void init_commands() {
+
+}
