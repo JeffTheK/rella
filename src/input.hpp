@@ -5,4 +5,4 @@
 
 std::string get_input();
 
-bool handle_input();
+bool handle_input(std::string input);

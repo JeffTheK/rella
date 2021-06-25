@@ -10,8 +10,7 @@ std::string get_input() {
     return str;
 }
 
-bool handle_input() {
-    auto input = get_input();
+bool handle_input(std::string input) {
     
     for(auto cmd : commands) {
         auto keys = cmd.keys;

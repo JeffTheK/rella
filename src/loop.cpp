@@ -9,7 +9,7 @@ void start_loop() {
 }
 
 void loop() {
-    auto result = handle_input(); // returns bool
+    auto result = handle_input(get_input()); // returns bool
     // if true player made action/took turn and now we need to update ai
     // else return and loop again
     if (result != true) return;
