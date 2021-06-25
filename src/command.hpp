@@ -1,17 +1,17 @@
 #pragma once
 
 #include <string>
-#include <map>
+#include <vector>
 #include <functional>
 
 struct Command {
-    std::string key = "";
+    std::vector<std::string> keys;
     std::function<bool()> function;
     
-    Command(std::string key_, std::function<bool()> function_);
+    Command(std::vector<std::string> keys_, std::function<bool()> function_);
 };
 
-static std::map<std::string, Command> commands;
+static std::vector<Command> commands;
 
 void add_command(Command cmd);
 
