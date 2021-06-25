@@ -3,6 +3,6 @@
 #include <string>
 #include <iostream>
 
-static std::string get_input();
+std::string get_input();
 
-static bool handle_input();
+bool handle_input();
