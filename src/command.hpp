@@ -1,10 +1,10 @@
 #pragma once
 
 #include <string>
-#include <vector>
+#include <map>
 #include <functional>
 
-static std::vector<Command> commands;
+static std::map<std::string, Command> commands;
 
 struct Command {
     std::string key = "";
@@ -12,3 +12,4 @@ struct Command {
     
     Command(std::string key_, std::function<bool()> function_);
 };
+
