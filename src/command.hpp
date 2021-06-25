@@ -15,3 +15,5 @@ struct Command {
 
 void add_command(Command cmd);
 
+void init_commands();
+
