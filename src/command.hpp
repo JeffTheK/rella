@@ -4,6 +4,8 @@
 #include <vector>
 #include <functional>
 
+static std::vector<Command> commands;
+
 struct Command {
     std::string key = "";
     std::function<bool()> function;
