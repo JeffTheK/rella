@@ -10,5 +10,11 @@ void add_command(Command cmd) {
 }
 
 void init_commands() {
-
+    add_command({
+        "exit",
+        [=](){
+            game_is_running = false;
+            return false;
+        }
+    });
 }
