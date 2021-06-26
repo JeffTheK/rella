@@ -82,4 +82,22 @@ void init_commands() {
         },
         "prints all visible objects"
     });
+    add_command({
+        {"help"},
+        [](){
+            for(auto cmd : commands) {
+                std::string msg = "";
+                for (auto key : cmd.keys) {
+                    msg += key; msg += " "
+                }
+                if (cmd.description != "") {
+                    msg += "-"; msg += cmd.description;
+                }
+                msg += "\n";
+                std::cout << msg;
+            }
+            return false;
+        },
+        "prints all of the possible commands and their descriptions"
+    });
 }
