@@ -4,7 +4,7 @@
 
 Faction Faction::random() {
     using Random = effolkronium::random_static;
-    auto number = Random::get<int>(0, static_cast<int>(Faction::Type::neutral));
+    auto number = Random::get<int>(1, static_cast<int>(Faction::Type::neutral));
     return static_cast<Faction::Type>(number);
 }
 
