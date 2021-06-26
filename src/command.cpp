@@ -88,7 +88,7 @@ void init_commands() {
             for(auto cmd : commands) {
                 std::string msg = "";
                 for (auto key : cmd.keys) {
-                    msg += key; msg += " "
+                    msg += key; msg += " ";
                 }
                 if (cmd.description != "") {
                     msg += "-"; msg += cmd.description;
