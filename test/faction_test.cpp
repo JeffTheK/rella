@@ -10,9 +10,9 @@ TEST_CASE("random") {
     }
     CHECK(std::find_if(results.begin(), results.end(), Faction::Type::enemy) != results.end());
     CHECK(std::find_if(results.begin(), results.end(), Faction::Type::neutral) != results.end());
+    CHECK(std::find_if(results.begin(), results.end(), Faction::Type::player) != results.end());
     
     // should not be present
-    CHECK(std::find_if(results.begin(), results.end(), Faction::Type::player) == results.end());
     CHECK(std::find_if(results.begin(), results.end(), Faction::Type::null) == results.end());
 }
 
