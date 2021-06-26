@@ -18,7 +18,7 @@ void make_random_npc() {
     entity->add_component<Position>(Position::random());
     entity->add_component<Inventory>({max_items});
     entity->add_component<Name>(Name::random());
-    // entity->add_component<Faction>({Faction::random()}); FIXME: implement Faction::random()
+    entity->add_component<Faction>({Faction::random()});
     entity->add_component<Health>({0, max_health, max_health, health_regen});
     entity->add_component<Mana>({0, max_mana, max_mana, mana_regen});
     entities.insert({entity->get_id(), entity});
