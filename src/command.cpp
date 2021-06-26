@@ -6,9 +6,10 @@
 #include "name.hpp"
 #include <iostream>
 
-Command::Command(std::vector<std::string> keys_, std::function<bool()> function_) {
+Command::Command(std::vector<std::string> keys_, std::function<bool()> function_, std::string description_) {
     keys = keys_;
     function = function_;
+    description = description_;
 }
 
 void add_command(Command cmd) {
