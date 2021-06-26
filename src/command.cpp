@@ -22,7 +22,8 @@ void init_commands() {
         [](){
             game_is_running = false;
             return false;
-        }
+        },
+        "terminates the program"
     });
     add_command({ // ^
         {"north", "n", "k"},
@@ -78,6 +79,7 @@ void init_commands() {
                 std::cout << "You see nothing";
             }
             return false;
-            }
+        },
+        "prints all visible objects"
     });
 }
