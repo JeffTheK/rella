@@ -17,5 +17,7 @@ struct Faction : Component<Faction> {
         faction = type_;
     }
     
+    static Faction random();
+    
     static Faction load_from_json(json component_json);
 };

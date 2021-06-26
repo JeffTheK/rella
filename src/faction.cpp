@@ -1,5 +1,12 @@
 #include "faction.hpp"
 #include <string>
+#include "../include/random.hpp"
+
+Faction Faction::random() {
+    using Random = effolkronium::random_static;
+    auto number = Random::get<int>(0, static_cast<int>(Faction::Type::neutral));
+    return static_cast<Faction::Type>(number);
+}
 
 Faction Faction::load_from_json(json component_json) {
     auto str = component_json["faction"].get<std::string>();
