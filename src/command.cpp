@@ -177,4 +177,51 @@ void init_commands() {
         },
         "print info about selected visible character"
     });
+    add_command({
+        {"pickup"},
+        [](){
+            auto player_pos = player_entity->get_component<Position>();
+            auto entities = find_entities_if([=](Entity& e){
+                auto e_pos = e.get_component<Position>();
+                return (*player_pos) == (*e_pos) &&
+                    e.has_component<Item>();
+            });
+            
+            if (entities.size() == 0) {
+                std::cout << "no items to pickup";
+                return false;
+            }
+            
+            std::string msg = "";
+            for (size_t i = 0; i < entities.size(); i++)
+            {
+                auto e = entities[i];
+                auto name = e->get_component<Name>();
+                msg += std::to_string(i); msg += " - ";
+                msg += name->name; msg += "\n";
+            }
+            
+            std::string input = "";
+            std::cin >> input;
+            auto index = std::stoi(input);
+            
+            if (index < 0 || index > entities.size() - 1) {
+                std::cout << "wrong input";
+                return false;
+            }
+            
+            auto inventory = player_entity->get_component<Inventory>();
+            if (inventory->items.size() == inventory->max_items) {
+                std::cout << "can't pick up, inventory is full";
+                return false;
+            }
+            
+            auto e = entities[index];
+            inventory->items.push_back(e->get_component<Item>());
+            e->remove_component<Position>();
+
+            return false;
+        },
+        "Take choosen item"
+    });
 }
