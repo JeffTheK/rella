@@ -252,7 +252,7 @@ void generate_player() {
 - [ ] drop - creates a list of items player has with indexes and drops item by index or types something else to quit
 - [ ] attack, a - choose enemy to attack
 - [x] inventory, i - prints items player has
-- [ ] inspect - makes a list of npcs to enspect. Upon choosing prints their info like stats, health, faction
+- [x] inspect - makes a list of npcs to enspect. Upon choosing prints their info like stats, health, faction
 - [x] look - lists all objects that are on the same position as player
 
 

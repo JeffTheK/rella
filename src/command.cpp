@@ -5,6 +5,10 @@
 #include "position.hpp"
 #include "name.hpp"
 #include "inventory.hpp"
+#include "ai.hpp"
+#include "faction.hpp"
+#include "health.hpp"
+#include "mana.hpp"
 #include <iostream>
 
 Command::Command(std::vector<std::string> keys_, std::function<bool()> function_, std::string description_) {
@@ -116,5 +120,61 @@ void init_commands() {
             return false;
         },
         "prints items you currently have"
+    });
+    add_command({ // FIXME: this code is very shitty, you can inspect yourself(shouldn't do this)
+        {"inspect"},
+        [](){
+            auto player_pos = player_entity->get_component<Position>();
+            auto entities = find_entities_if([=](Entity& e){
+                auto e_pos = e.get_component<Position>();
+                return e_pos != nullptr &&
+                    (*e_pos) == (*player_pos) &&
+                    e.has_component<AI>();
+            });
+            
+            if (entities.size() == 0) {
+                std::cout << "No characters available";
+                return false;
+            }
+            
+            std::cout << "Choose which one to inspect";
+            std::string msg = "";
+            
+            for (size_t i = 0; i < entities.size(); i++) {
+                auto e = entities[i];
+                auto name = e->get_component<Name>();
+                assert(name != nullptr);
+                msg += std::to_string(i); msg += " - ";
+                msg += name->name;
+            }
+            
+            std::string input = "";
+            std::cin >> input;
+            auto index = std::stoi(input);
+            if (index < 0 || index > entities.size() - 1) {
+                std::cout << "wrong input";
+                return false;
+            }
+            
+            auto entity = entities[index];
+            std::string info_msg = "";
+            info_msg += entity->get_component<Name>()->name;
+            auto faction = entity->get_component<Faction>()->faction;
+            if (faction == Faction::Type::enemy) {
+                info_msg += " enemy";
+            } else if (faction == Faction::Type::neutral) {
+                info_msg += " netural";
+            } else if (faction == Faction::Type::player) {
+                info_msg += " ally";
+            }
+            auto health = entity->get_component<Health>();
+            info_msg += " hp:"; info_msg += std::to_string(health->current); info_msg += "/"; info_msg += std::to_string(health->max);
+            auto mana = entity->get_component<Mana>();
+            info_msg += " mana:"; info_msg += std::to_string(mana->current); info_msg += "/"; info_msg += std::to_string(mana->max);
+            std::cout << info_msg;
+            
+            return false;
+        },
+        "print info about selected visible character"
     });
 }
