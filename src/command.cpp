@@ -4,6 +4,7 @@
 #include "player.hpp"
 #include "position.hpp"
 #include "name.hpp"
+#include "inventory.hpp"
 #include <iostream>
 
 Command::Command(std::vector<std::string> keys_, std::function<bool()> function_, std::string description_) {
@@ -99,5 +100,21 @@ void init_commands() {
             return false;
         },
         "prints all of the possible commands and their descriptions"
+    });
+    add_command({
+        {"inventory", "i"},
+        [](){
+            auto inventory = player_entity->get_component<Inventory>();
+            assert(inventory != nullptr);
+            
+            std::string msg = "Your items: ";
+            for(auto item : inventory->items) {
+                auto name = item->owner_ptr->get_component<Name>();
+                assert(name != nullptr);
+                msg += name->name; msg += " ";
+            }
+            return false;
+        },
+        "prints items you currently have"
     });
 }
