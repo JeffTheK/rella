@@ -224,4 +224,38 @@ void init_commands() {
         },
         "Take choosen item"
     });
+    add_command({
+        {"drop"},
+        [](){
+            auto items = player_entity->get_component<Inventory>()->items;
+            
+            if (items.size() == 0) {
+                std::cout << "no items to drop";
+                return false;
+            }
+            
+            std::string msg = "";
+            for (size_t i = 0; i < items.size(); i++)
+            {
+                auto e = items[i]->owner_ptr;
+                auto name = e->get_component<Name>();
+                msg += std::to_string(i); msg += " - ";
+                msg += name->name; msg += "\n";
+            }
+            
+            std::string input = "";
+            std::cin >> input;
+            auto index = std::stoi(input);
+            
+            if (index < 0 || index > items.size() - 1) {
+                std::cout << "wrong input";
+                return false;
+            }
+            
+            items.erase(items.begin() + index);
+
+            return false;
+        },
+        "Drops choosen item from inventory"
+    });
 }
