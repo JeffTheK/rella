@@ -248,7 +248,7 @@ void generate_player() {
 - [x] east,   e  l- move -->
 - [x] south, s   j - move v
 - [x] west,  w  h- move <--
-- [ ] pickup - take item on the ground. If multiple items make list
+- [x] pickup - take item on the ground. If multiple items make list
 - [ ] drop - creates a list of items player has with indexes and drops item by index or types something else to quit
 - [ ] attack, a - choose enemy to attack
 - [x] inventory, i - prints items player has
